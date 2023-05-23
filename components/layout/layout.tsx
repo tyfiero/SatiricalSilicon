@@ -14,9 +14,8 @@ export default function Layout({ children, fontCn }) {
           <NewNav/>
 
           <AnimatePresence>
-          <div className="fixed top-0 left-0 w-screen h-screen bg-fixed bg-center bg-cover -z-50" style={{backgroundImage: "url(/assets/bg.png)"}}>
-      {/* Your content goes here */}
-    </div>
+          {/* <div className="fixed top-0 left-0 w-screen h-screen bg-fixed bg-center bg-cover -z-50" style={{backgroundImage: "url(/assets/bg.png)"}}> 
+    </div> */}
             <m.main
               key={router.route}
               initial={{ opacity: 0 }}
