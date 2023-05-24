@@ -4,7 +4,9 @@ import { generatePost } from "@/lib/generatePost";
 import { uploadImage } from "@/lib/uploadImage";
 
 const grayMatter = require('gray-matter');
-
+export const config = {
+    runtime: 'edge',
+  };
 export default async function handler(req, res) {
     // This is an LLMChain to generate ideas.
 
