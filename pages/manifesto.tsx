@@ -48,6 +48,14 @@ Here at Satirical Silicon, we'll never let you forget that the tech industry is 
                   
                 </div>
               </MotionText>
+              <button className="button-1"
+              onClick={() => {
+                fetch("/api/cron")
+                  .then((res) => res.json())
+                  .then((res) => console.log(res));
+                }
+              }
+              >Test API</button>
             </TextSection>
 
           

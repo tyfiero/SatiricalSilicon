@@ -90,11 +90,11 @@ export default function Post({ code, frontmatter, morePosts }) {
                     ),
                   }}
                 />
-                <Comments
+                {/* <Comments
                   title={frontmatter.title}
                   id={frontmatter.date}
                   slug={frontmatter.slug}
-                />
+                /> */}
               </div>
             </div>
           </article>
