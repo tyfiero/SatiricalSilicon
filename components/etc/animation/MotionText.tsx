@@ -12,8 +12,11 @@ function MotionText({
   const prefersReducedMotion = useReducedMotion();
   let distance = invert ? xPx : xPx * -1;
   let yDistance = invert ? yPx : yPx * -1;
-  let xValue = prefersReducedMotion ? 0 : distance;
-  let yValue = prefersReducedMotion ? 0 : yDistance;
+  let xValue = 0;
+  let yValue =  0;
+  //
+  // let xValue = prefersReducedMotion ? 0 : distance;
+  // let yValue = prefersReducedMotion ? 0 : yDistance;
 
   let sizeClasses = noSize ? "" : "w-full h-full";
   return (
@@ -23,7 +26,7 @@ function MotionText({
         x: xValue,
         y: yValue,
         opacity: 0,
-        scale: prefersReducedMotion ? 1 : 0.6,
+        scale: prefersReducedMotion ? 1 : 0.8,
       }}
       whileInView={{
         x: 0,

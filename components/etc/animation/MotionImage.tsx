@@ -7,14 +7,14 @@ function MotionImage({ children, delay = 0, classes = "w-full h-full" }) {
   return (
     <m.div
       className={classes}
-      initial={{ scale: prefersReducedMotion ? 1 : 0.6, opacity: 0 }}
+      initial={{ scale: prefersReducedMotion ? 1 : 0.85, opacity: 0 }}
       whileInView={{
         scale: 1,
         opacity: 1,
         transition: {
           type: "spring",
           bounce: 0.4,
-          duration: 1.5,
+          duration: 0.5,
           delay: delay,
         },
       }}

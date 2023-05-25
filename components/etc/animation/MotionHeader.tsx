@@ -12,8 +12,11 @@ function MotionHeader({
   const prefersReducedMotion = useReducedMotion();
   let distance = invert ? xPx : xPx * -1;
   let yDistance = invert ? yPx : yPx * -1;
-  let xValue = prefersReducedMotion ? 0 : distance;
-  let yValue = prefersReducedMotion ? 0 : yDistance;
+  let xValue = -10;
+  let yValue =  0;
+  //
+  // let xValue = prefersReducedMotion ? 0 : distance;
+  // let yValue = prefersReducedMotion ? 0 : yDistance;
   let sizeClasses = noSize ? "" : "w-full h-full";
 
   return (
