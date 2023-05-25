@@ -3,7 +3,9 @@ import { generateImage } from "@/lib/generateImage";
 import { generatePost } from "@/lib/generatePost";
 import { uploadImage } from "@/lib/uploadImage";
 
-const grayMatter = require('gray-matter');
+// const grayMatter = require('gray-matter');
+import frontMatter from 'front-matter';
+
 export const config = {
     runtime: 'edge',
   };
@@ -13,8 +15,8 @@ export default async function handler(req, res) {
 
 const response = await generatePost();
 const extractData = (response) => {
-    const { data } = grayMatter(response);
-    return {slug:data.slug, imgUrl:data.imgUrl, title:data.title};
+    const { attributes }:any = frontMatter(response);
+    return {slug:attributes.slug, imgUrl:attributes.imgUrl, title:attributes.title};
 }
 
 const slug = extractData(response).slug;
