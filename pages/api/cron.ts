@@ -4,7 +4,9 @@ import { generatePost } from "@/lib/generatePost";
 import { uploadImage } from "@/lib/uploadImage";
 
 // const grayMatter = require('gray-matter');
-import frontMatter from 'front-matter';
+// import frontMatter from 'front-matter';
+import { parseDocument } from 'yaml';
+
 
 export const config = {
     runtime: 'edge',
@@ -15,8 +17,8 @@ export default async function handler(req, res) {
 
 const response = await generatePost();
 const extractData = (response) => {
-    const { attributes }:any = frontMatter(response);
-    return {slug:attributes.slug, imgUrl:attributes.imgUrl, title:attributes.title};
+    const doc = parseDocument(response);
+    return { slug: doc.get('slug'), imgUrl: doc.get('imgUrl'), title: doc.get('title') };
 }
 
 const slug = extractData(response).slug;
