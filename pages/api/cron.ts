@@ -7,19 +7,28 @@ import { uploadImage } from "@/lib/uploadImage";
 // import frontMatter from 'front-matter';
 import { parseDocument } from 'yaml';
 
-
+import { NextResponse } from 'next/server';
+import type { NextFetchEvent, NextRequest } from 'next/server';
+ 
 export const config = {
     runtime: 'edge',
   };
-export default async function handler(req, res) {
+export default async function handler(
+    request: NextRequest,
+    context: NextFetchEvent,
+  ) {
     // This is an LLMChain to generate ideas.
 
+    const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const generateFullPostProcess = async () => {
 
 const response = await generatePost();
 const extractData = (response) => {
     const doc = parseDocument(response);
     return { slug: doc.get('slug'), imgUrl: doc.get('imgUrl'), title: doc.get('title') };
 }
+await wait(10000);
 
 const slug = extractData(response).slug;
 const imgUrl = extractData(response).imgUrl;
@@ -40,8 +49,14 @@ const post = {
 console.log(post)
 
 await createFile(post);
+}
 
 
-res.status(200).end("Post created successfully.");
+context.waitUntil(generateFullPostProcess().then((json) => console.log({ json })));
+
+// res.status(200).end("Post created successfully.");
+return NextResponse.json({
+    name: `Hello, from ${request.url} I'm an Edge Function!`,
+  });
 
 }
