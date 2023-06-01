@@ -27,6 +27,9 @@ const rubik = Rubik({
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = React.useState(false);
   const router = useRouter();
+  React.useEffect(() => {
+    import('preline')
+  }, [])
   //Loading animation logic
   React.useEffect(() => {
     const handleStart = (url) => {
