@@ -15,6 +15,6 @@ export async function generateImage(prompt) {
     size: "1024x1024",
     response_format: "b64_json",
   });
-// console.log(response.data.data[0])
+console.log("Image generated successfully")
   return response.data.data[0];
 }

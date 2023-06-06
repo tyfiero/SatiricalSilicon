@@ -15,7 +15,7 @@ import { generateImagePrompt } from "@/lib/generateImagePrompt";
 //   };
 export default async function handler(req, res) {
 console.time('makepost')
-
+try{
 let response = await generatePost();
 console.log(response)
 
@@ -38,6 +38,8 @@ console.log(response); // "Your API Response"
 // const imgUrl = extractData(response).imgUrl;
 // const title = extractData(response).title
 // const description = extractData(response).description
+// Escape all quote characters
+// const cleanedResponse = response.replace(/"/g, '\\"').replace(/'/g, "\\'");
 const extractData = (response) => {
     const { data } = grayMatter(response);
     return {slug:data.slug, imgUrl:data.imgUrl, title:data.title, description:data.description};
@@ -73,8 +75,11 @@ console.log(post)
 
 await createFile(post);
 
-
 console.timeEnd('makepost')
+}catch(e){
+    console.log(e)
+    console.timeEnd('makepost')
+}
 res.status(200).end("Post created successfully.");
 
 
