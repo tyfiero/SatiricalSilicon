@@ -9,7 +9,7 @@ import { Toaster } from "react-hot-toast";
 import { useRouter } from "next/router";
 import FullLoader from "@/components/etc/FullLoader";
 import Head from "next/head";
-import { Rubik, Open_Sans } from "@next/font/google";
+import { Rubik, Open_Sans } from "next/font/google";
 
 const open_sans = Open_Sans({
   variable: "--font-open_sans",

@@ -22,9 +22,6 @@ export default function Index({ allPosts }) {
         />
       </Head>
 
-      {/* <h1 className="text-3xl font-bold leading-tight tracking-tighter lg:text-8xl lg:pr-8 f1">
-          Blog
-        </h1> */}
       <div className="page-container">
         <h1 className="text-left heading-lg fade-effect-quick">Blog</h1>
 
@@ -39,16 +36,7 @@ export default function Index({ allPosts }) {
             />
           </div>
         )}
-        {/* {heroPost && (
-          <HeroPost
-            title={heroPost.frontmatter.title}
-            coverImage={heroPost.frontmatter.imgUrl}
-            date={heroPost.frontmatter.date}
-            author={"Ty Fiero"}
-            slug={heroPost.slug}
-            excerpt={heroPost.frontmatter.description}
-          />
-        )} */}
+    
 
         <div className="my-10" />
         <MotionText yPx={-100} xPx={0} noSize>

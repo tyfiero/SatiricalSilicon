@@ -7,51 +7,73 @@ import MotionText from "@/components/etc/animation/MotionText";
 import MotionImage from "@/components/etc/animation/MotionImage";
 import ImageSection from "@/components/layout/ImageSection";
 import Accordion from "@/components/etc/Accordion";
+import { TbApple, TbDeviceLaptop, TbRobot } from "react-icons/tb";
+import { FaLaugh, FaRegLaughWink } from "react-icons/fa";
+import { getAllPosts } from "utils/mdxUtils";
+import MdXHomePosts from "@/components/blog/mdx/mdxHomePosts";
+import PostPreviewSmall from "@/components/blog/post-preview-small";
 
 export default function Index({ allPosts }) {
-  //TODO: remove all QCBot instances and add actual name, and branding like icons and logos
+  const posts = allPosts.slice(1);
   return (
     <>
       <Head>
         <title>Satirical Silicon</title>
         <meta name="description" content={`Satirical Silicon`} />
       </Head>
-      <div className="fade-effect-quick page-container !items-start">
+      <div className="fade-effect-quick page-container  !mb-16 !pt-0 !px-0 !items-start relative">
+    <div className="relative md:h-[41rem] w-full">
+       <div className="absolute top-0 left-0  -z-[5]">
+            <MotionImage>
+        <div className="relative w-full h-full">
+                    <img
+                      src="/assets/landing.png"
+                      alt="robot"
+                      className="z-0 w-full h-full"
+                    />
+       <div className="absolute top-0 left-0 z-10 w-full h-full bg-gradient-to-l from-transparent via-[#0000002a] to-black">
+       </div>
+        </div>
+            </MotionImage>
+       </div>
         <DualSection centerText cn="w-full lg:mt-10">
           <TextSection>
-            <section className="flex flex-col sm:items-center lg:items-start lg:ml-24 sm:ml-0 ">
+            <section className="z-50 flex flex-col ml-2 sm:items-center lg:items-start lg:ml-24 md:mt-28">
               <MotionHeader>
                 <m.h1
-                  whileHover={{
-                    scale: 1.05,
-                    originX: 1,
-                    letterSpacing: "-0.05em",
-                  }}
                   initial={{ letterSpacing: "-0.1em" }}
                   animate={{ letterSpacing: "0em" }}
-                  className="font-bold leading-tight tracking-tighter sm:!text-7xl lg:text-8xl pr-4 logo f1 drop-shadow-lg drop-shadow-p-800 dark:drop-shadow-p-500 whitespace-nowrap"
+                  className="font-bold leading-tight tracking-tighter sm:!text-7xl lg:text-8xl pr-4 logo f1 drop-shadow-lg drop-shadow-p-800 dark:drop-shadow-p-500 "
                 >
                   Satirical Silicon
                 </m.h1>
                 
               </MotionHeader>
 
-              <MotionText>
-                <p className="text-2xl font-semibold lg:text-left sm:text-center sm:mt-5 lg:mt-0">
-                The Place Where AI Misunderstands Humor So You Don't Have To!
+              {/* <MotionText> */}
+                <p className="z-10 mt-12 text-2xl font-semibold lg:text-left sm:text-center lg:mt-0 md:text-p-200 text-p-500">
+                Turning AI's lack of humor into a feature, not a bug
                 </p>
-              </MotionText>
+              {/* </MotionText> */}
             </section>
           </TextSection>
 
-
+           <div className="hidden w-1/2 opacity-0 md:block"></div>
 
 
           
         </DualSection>
+    </div>
 
          {/* separator */}
-         <div className="lg:my-10 sm:my-6" />
+         <div className="lg:my-5 sm:my-6" />
+         <m.h3
+                  initial={{ letterSpacing: "-0.1em" }}
+                  animate={{ letterSpacing: "0em" }}
+                  className="pr-4 mx-auto font-bold leading-tight tracking-tighter lg:text-5xl logo f1 drop-shadow-lg drop-shadow-p-800 dark:drop-shadow-p-500 "
+                >
+                  Welcome!
+                </m.h3>
           <MotionText>
               <div className="px-10 mx-auto text-box md:w-2/3 sm:w-full">
                   <p className="text-base font-semibold lg:text-left sm:text-center sm:mt-5 lg:mt-0">
@@ -61,112 +83,112 @@ export default function Index({ allPosts }) {
                   <br/><br/>
                   Tech news as relevant as using a floppy disk to store the latest 4K blockbuster movie. So settle down, sip your artisanally brewed quantum espresso, and let us take you on an unforgettable journey through the looking glass of technology, through the lens of a below average AI comedian. 
                   </p>
-                  <p className="mt-8 text-xl text-center">Welcome to the farcical future.</p>
-                  <p className="mt-4 text-3xl text-center text-p-500 dark:text-p-600">Welcome to Satirical Silicon.</p>
+                
               </div>
               </MotionText>
         {/* separator */}
-        <div className="lg:my-20 sm:my-6" />
+        <div className="lg:my-10 sm:my-6" />
 
 
 <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
   <div className="grid items-center gap-12 sm:grid-cols-2 lg:grid-cols-4">
 
-    <div>
-      <div className="relative flex justify-center items-center w-12 h-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-p-600 before:via-transparent before:to-s-600 before:rounded-xl dark:bg-slate-900">
-        <svg className="text-p-600 w-7 h-7 dark:text-p-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
-          <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-        </svg>
+  <div className="flex flex-col justify-start h-64 text-box bg-gradient-to-br from-white to-p-200 dark:from-black dark:to-p-700">
+      <div className="relative flex justify-center items-center w-12 min-h-[3rem] h-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-p-600 before:via-transparent before:to-s-600 before:rounded-xl dark:bg-slate-900">
+      <TbRobot className="text-p-600 w-7 h-7 dark:text-p-500"/>
+
       </div>
       <div className="mt-5">
         <h3 className="text-lg font-semibold text-gray-800 dark:text-white">AI Generated</h3>
-        <p className="mt-1 text-gray-600 dark:text-gray-400">Fully automated humor generation, because we can't trust humans to be consistently funny, especially the guy that made this site.</p>
+        <p className="mt-1 text-sm text-gray-600 md:text-base dark:text-gray-200">Fully automated humor generation, because we can't trust humans to be consistently funny, especially the guy that made this site.</p>
       </div>
     </div>
 
-    <div>
+    <div className="flex flex-col justify-start h-64 text-box bg-gradient-to-br from-white to-p-300 dark:from-black dark:to-p-700">
       <div className="relative flex justify-center items-center w-12 h-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-p-600 before:via-transparent before:to-s-600 before:rounded-xl dark:bg-slate-900">
-        <svg className="text-p-600 w-7 h-7 dark:text-p-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M9.465 10H12a2 2 0 1 1 0 4H9.465c.34-.588.535-1.271.535-2 0-.729-.195-1.412-.535-2z"/>
-          <path d="M6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm.535-10a3.975 3.975 0 0 1-.409-1H4a1 1 0 0 1 0-2h2.126c.091-.355.23-.69.41-1H4a2 2 0 1 0 0 4h2.535z"/>
-          <path d="M14 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
-        </svg>
+        <TbApple className="text-p-600 w-7 h-7 dark:text-p-500"/>
       </div>
       <div className="mt-5">
         <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Fresh</h3>
-        <p className="mt-1 text-gray-600 dark:text-gray-400">Hot off the press, and as crisp as a new iPhone, but without the overbearing sense of capitalist domination.</p>
+        <p className="mt-1 text-sm text-gray-600 dark:text-gray-200 md:text-base ">Fresh off the server, and as crisp as a new iPhone, but without the overbearing sense of capitalist domination.</p>
       </div>
     </div>
-    <div>
+    <div className="flex flex-col justify-start h-64 text-box bg-gradient-to-br from-white to-p-400 dark:from-black dark:to-p-700">
       <div className="relative flex justify-center items-center w-12 h-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-p-600 before:via-transparent before:to-s-600 before:rounded-xl dark:bg-slate-900">
-        <svg className="text-p-600 w-7 h-7 dark:text-p-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
-          <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
-        </svg>
+      <TbDeviceLaptop className="text-p-600 w-7 h-7 dark:text-p-500"/>
+
       </div>
       <div className="mt-5">
         <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Relevant</h3>
-        <p className="mt-1 text-gray-600 dark:text-gray-400">A daily dose of current tech satire, served hotter than your overworked laptop running docker.</p>
+        <p className="mt-1 text-sm text-gray-600 dark:text-gray-200 md:text-base ">A daily dose of current tech satire, served hotter than your overworked laptop running docker.</p>
       </div>
     </div>
 
-    <div>
+    <div className="flex flex-col justify-start h-64 text-box bg-gradient-to-br from-white to-p-500 dark:from-black dark:to-p-700">
       <div className="relative flex justify-center items-center w-12 h-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-p-600 before:via-transparent before:to-s-600 before:rounded-xl dark:bg-slate-900">
-        <svg className="text-p-600 w-7 h-7 dark:text-p-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-          <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-        </svg>
+      <FaRegLaughWink className="text-p-600 w-7 h-7 dark:text-p-500"/>
+
       </div>
       <div className="mt-5">
         <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Barely Funny</h3>
-        <p className="mt-1 text-gray-600 dark:text-gray-400">Our humor level hovers somewhere between 'why did the chicken cross the road' and '404 joke not found'. If laughter is the best medicine, we might just give you a mild cough.</p>
+        <p className="mt-1 text-sm text-gray-600 dark:text-gray-200 md:text-base ">If laughter is the best medicine, we might just give you a mild cough, but like, you might think it's funny.</p>
       </div>
     </div>
   </div>
 </div>
 <MotionHeader>
+                
+        <div className="w-4/5 mx-auto mt-20 md:w-1/3">
                 <m.h3
                   initial={{ letterSpacing: "-0.1em" }}
                   animate={{ letterSpacing: "0em" }}
-                  className="font-bold leading-tight tracking-tighter sm:!text-xl lg:text-3xl pr-4 logo f1 drop-shadow-lg drop-shadow-p-800 dark:drop-shadow-p-500 whitespace-nowrap"
+                  className="pr-4 mx-auto font-bold leading-tight tracking-tighter text-center lg:text-5xl logo f1 drop-shadow-lg drop-shadow-p-800 dark:drop-shadow-p-500 whitespace-nowrap"
                 >
                   FAQ
                 </m.h3>
-                
+         <div className="text-box "> <Accordion/></div>
+          </div>
               </MotionHeader>
-        <Accordion/>
-        {/* <DualSection cn="sm:px-0 !w-full h-fit">
-          <TextSection>
-            <MotionHeader>
-              <h2 className={"font-bold heading-lg !mb-0 "}>Like your humor as dry as your code? You're in the right place</h2>
-            </MotionHeader>
-            <MotionText>
-              <div className="text-box sm:mx-0">
-                <p>
-                We'd like to formally (and with a smirk) welcome you to Satirical Silicon, the world's first and most entertaining tech satirical site generated entirely by an AI. Yep, you heard it right! Our robot overlords have officially taken over humor too. Apparently, they got tired of conquering chess and diagnosing diseases.
-
-They're here to give you a fresh and utterly absurd perspective on tech, programming, and AI. They're finding bugs not just in your code, but in your sanity. Because why not? Life is too short to take technology too seriously.
-                </p>
-              </div>
-            </MotionText>
-          </TextSection>
-          <ImageSection
-            src="https://cdn.vox-cdn.com/thumbor/Jq70FPLxsqaF0Mk57HPxdWpOtaM=/0x20:650x453/1200x800/filters:focal(0x20:650x453)/cdn.vox-cdn.com/assets/2234983/onion1.jpg"
-            alt="Satirical Silicon"
-          />
-        </DualSection> */}
         {/* separator */}
         <div className=" lg:my-28 sm:my-8" />
-      
+        <m.h3
+                  initial={{ letterSpacing: "-0.1em" }}
+                  animate={{ letterSpacing: "0em" }}
+                  className="pr-4 mx-auto mb-8 font-bold leading-tight tracking-tighter text-center lg:text-5xl logo f1 drop-shadow-lg drop-shadow-p-800 dark:drop-shadow-p-500 whitespace-nowrap"
+                >
+                  All Posts
+                </m.h3>
+        {posts.length > 0 ? <div className="flex flex-col w-full gap-12 px-2 mx-auto md:w-2/3">
+          {posts.map((post) => (
+          <PostPreviewSmall
+            key={post.slug}
+            title={post.frontmatter.title}
+            coverImage={post.frontmatter.imgUrl}
+            date={post.frontmatter.date}
+            slug={post.slug}
+            excerpt={post.frontmatter.description}
+          />
+        ))}
+        <p className="text-sm text-center text-gray-700/40 f1">{posts.length} posts</p>
+        </div>: null}
+        
       </div>
     </>
   );
 }
 
-// export async function getStaticProps({ preview }) {
+export async function getStaticProps({ preview }) {
+  const posts = getAllPosts().filter((p) => {
+    return p.frontmatter.published === true;
+  });
+  //sorted by date (newest first)
+  const allPosts = posts.sort((a, b) => {
+    let date2: number = Number(new Date(b.frontmatter.date));
+    let date1: number = Number(new Date(a.frontmatter.date));
+    return date2 - date1;
+  });
 
-//   return {
-//     props: {  },
-//   };
-// }
+  return {
+    props: { allPosts },
+  };
+}
