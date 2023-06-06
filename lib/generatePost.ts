@@ -10,7 +10,7 @@ import {
 export const generatePost = async () =>{
     const llm = new ChatOpenAI({ 
         temperature: 0.7, 
-        // modelName: 'gpt-4' 
+        modelName: 'gpt-4' 
     });
     const chatPrompt = ChatPromptTemplate.fromPromptMessages([
         SystemMessagePromptTemplate.fromTemplate(
@@ -26,7 +26,7 @@ export const generatePost = async () =>{
     // This is an LLMChain to select an idea from the list of ideas.
     const selectionLLM = new ChatOpenAI({ 
         temperature: 0.2, 
-        // modelName: 'gpt-4' 
+        modelName: 'gpt-4' 
     });
 
     

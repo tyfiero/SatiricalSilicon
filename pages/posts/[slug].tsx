@@ -7,7 +7,6 @@ import MotionHeader from "@/components/etc/animation/MotionHeader";
 import { getMDXComponent } from "mdx-bundler/client";
 import { getAllPosts, getSinglePost } from "utils/mdxUtils";
 import MdxPostHeader from "@/components/blog/mdx/mdxPostHeader";
-import Comments from "@/components/blog/Comments";
 import MdXHomePosts from "@/components/blog/mdx/mdxHomePosts";
 
 const ReadingBar = dynamic(() => import("@/components/blog/ReadingBar"), {
@@ -90,11 +89,7 @@ export default function Post({ code, frontmatter, morePosts }) {
                     ),
                   }}
                 />
-                {/* <Comments
-                  title={frontmatter.title}
-                  id={frontmatter.date}
-                  slug={frontmatter.slug}
-                /> */}
+                
               </div>
             </div>
           </article>

@@ -1,4 +1,4 @@
-import { HOME_OG_IMAGE_URL } from "@/lib/constants";
+
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
@@ -9,11 +9,11 @@ export default class MyDocument extends Document {
         <Head>
           <meta
             name="keywords"
-            content=""
+            content="Satire, silicon, AI, blog"
           />
           <meta name="theme-color" content="#0FA5E9" />
 
-          <meta name="application-name" content="Ty's blog" />
+          <meta name="application-name" content="Satirical Silicon" />
 
           {/*Add to homescreen for Chrome on Android --> */}
           <meta name="mobile-web-app-capable" content="yes" />
@@ -24,31 +24,22 @@ export default class MyDocument extends Document {
           <meta name="robots" content="index, follow" />
 
           {/* Twitter */}
-          {/* <meta name="twitter:card" content="summary" />
+          <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@FieroTy" />
-          <meta name="twitter:title" content="Ty Fiero's Blog" />
+          <meta name="twitter:title" content="Satirical Silicon" />
           <meta
             name="twitter:description"
-            content="Writings on tech, music, and life."
-          /> */}
-          {/* <meta name="twitter:image" content="./assets/other/Ty-lofi.webp" /> */}
+            content="A satirical take on the tech industry"
+          />
+          <meta name="twitter:image" content="./assets/og.png" />
           {/* Facebook */}
-          {/* <meta property="og:type" content="website" />
-          <meta property="og:title" content="Ty Fiero's Blog" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Satirical Silicon" />
           <meta
             property="og:description"
-            content="Writings on tech, music, and life. "
+            content="A satirical take on the tech industry."
           />
-          <meta property="og:image" content="./assets/other/Ty-lofi.webp" /> */}
-          {/* <script
-            defer
-            src="https://app.tinyanalytics.io/pixel/0333UQormJTGEbzB"
-          ></script> */}
-          {/* <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/icons/apple-touch-icon.png"
-          />
+          <meta property="og:image" content="./assets/og.png" />
           <link
             rel="icon"
             type="image/png"
@@ -61,32 +52,16 @@ export default class MyDocument extends Document {
             sizes="16x16"
             href="/icons/favicon-16x16.png"
           />
-          <link
-            rel="icon"
-            sizes="192x192"
-            href="/icons/android-chrome-192x192.png"
-          />
+        
 
-          <link rel="manifest" href="/manifest.json" />
-          <link rel="mask-icon" href="/maskable.png" />
           <link rel="shortcut icon" href="/icons/favicon.ico" />
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="msapplication-config" content="/browserconfig.xml" />
-          <meta name="apple-mobile-web-app-title" content="Ty Fiero" />
+          <meta name="apple-mobile-web-app-title" content="Satirical Silicon" />
 
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
 
-          <meta property="og:image" content={HOME_OG_IMAGE_URL} /> */}
-          {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin="anonymous"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@700&family=Quicksand:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
-          /> */}
+          <meta property="og:image" content={"./assets/og.png"} />
       
         </Head>
         <body className="transition duration-500 bg-white dark:bg-slate-800 ">
