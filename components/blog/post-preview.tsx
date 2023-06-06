@@ -34,11 +34,11 @@ export default function PostPreview({
                 </p>
               </h3>
 
+              <p className="text-base leading-relaxed ">{excerpt}</p>
               <div className="text-base italic lg:mb-2 text-slate-500 f2 dark:text-slate-300">
                 <Date dateString={date} />
               </div>
 
-              <p className="text-base leading-relaxed ">{excerpt}</p>
             </div>
           </div>
         </Link>

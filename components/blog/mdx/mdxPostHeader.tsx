@@ -5,8 +5,8 @@ import MdxCoverImage from "./mdxCoverImage";
 
 export default function MdxPostHeader({ title, coverImage, date, description }) {
   return (
-    <div className=" lg:w-[76rem] sm:w-full mx-auto flex flex-col items-center ">
-     <div className="flex flex-col mb-10">
+    <div className="flex flex-col items-center w-full mx-auto lg:w-4/5">
+     <div className="flex flex-col mb-10 md:mx-10">
         <PostTitle title={title} />
         <p className="mb-2 text-2xl">{description}</p>
         <p> {date && <Date dateString={date} />}</p>

@@ -34,7 +34,7 @@ export default function Post({ code, frontmatter, morePosts }) {
               <meta property="og:image" content={frontmatter.imgUrl} />
               <meta name="description" content={frontmatter.description} />
             </Head>
-            <div className="mx-auto sm:px-2 lg:px-1 sm:w-full lg:w-full">
+            <div className="px-2 mx-auto md:px-10 sm:w-full lg:w-full">
               <MdxPostHeader
                 title={frontmatter.title}
                 description={frontmatter.description}

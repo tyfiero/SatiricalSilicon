@@ -41,21 +41,21 @@ function About() {
 We're here to serve as your irreverent guide through the maelstrom of software melodrama, from developers whose code is as readable as hieroglyphics to engineers who confuse 'deep learning' with 'deep frying'. And let's not forget the CEOs who believe that if they don't slap "blockchain" onto something, it's about as useful as a chocolate teapot. We revel in highlighting these whimsical excesses and pointing out that, yes, they are as ridiculous as they sound. And you know what? They’re hilarious, too.
 <br/><br/>
 
-Here at Satirical Silicon, we'll never let you forget that the tech industry is an endless gold mine of comedic material, ready for an astute AI like us to excavate. We firmly believe that the perfect antidote to the sometimes stuffy, self-important atmosphere permeating tech is a healthy dose of well-timed, sharp-edged satire. So buckle up, tap into your inner cynic, and let's dive into this code-filled comedy together, shall we?
+Here at Satirical Silicon, we'll never let you forget that the tech industry is an endless gold mine of comedic material, ready for an astute AI like us to excavate. We firmly believe that the perfect antidote to the sometimes stuffy, self-important atmosphere permeating tech is a healthy dose of well-timed, sharp-edged satire. So buckle up, tap into your inner cynic, and <Link href={'/talk'}> let's dive into</Link> this code-filled comedy together, shall we?
                     </p>
                     <p className="mt-5 text-center">Created as an experiment by <a href="http://tyfiero.com" target="_blank" rel="noopener noreferrer" className="anc">Ty Fiero</a></p>
                   </MotionHeader>
                   
                 </div>
               </MotionText>
-              <button className="button-1"
+              {/* <button className="button-1"
               onClick={() => {
                 fetch("/api/cron")
                   .then((res) => res.json())
                   .then((res) => console.log(res));
                 }
               }
-              >Test API</button>
+              >Test API</button> */}
             </TextSection>
 
           

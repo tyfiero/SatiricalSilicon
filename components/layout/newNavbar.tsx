@@ -18,6 +18,7 @@ const NewNav = () => {
     { name: "Posts", url: "/posts" },
     { name: "Newsletter", url: "/newsletter" },
     { name: "Manifesto", url: "/manifesto" },
+    { name: "Talk", url: "/talk" },
   ];
 
   React.useEffect(() => {
@@ -27,6 +28,8 @@ const NewNav = () => {
       setSelected("Posts");
     } else if (router.asPath === "/manifesto") {
       setSelected("Manifesto");
+    } else if (router.asPath === "/talk") {
+      setSelected("Talk");
     }
   }, [router.asPath]); //eslint-disable-line
 
@@ -81,7 +84,13 @@ const NewNav = () => {
           href="/"
           className="flex items-center transition duration-1000 hover:scale-110"
         >
-          <div className="w-5 h-5 mr-2 rounded-full shadow-md bg-p-500"></div>
+          <div className="w-8 h-8 mb-1 mr-1 brightness-110 ">
+            <img
+              src="/icons/logo12.png"
+              alt="Satirical Silicon"
+              className="w-8 h-8"
+            />
+          </div>
           <p className="-ml-0 text-2xl font-bold f1 text-p-500 dark:text-p-400">
             Satirical Silicon
           </p>
