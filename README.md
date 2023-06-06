@@ -16,6 +16,10 @@ This unholy matrimony of tech nonsense wouldn't be possible without a stack that
 - Langchain: A tool for creating AI chains. Or is it a chain for creating AI tools? Who knows.
 - Tailwind CSS: A utility-first CSS framework for rapidly building custom designs. Or rapidly tearing out your hair. Depends on the day.
 
+## How Does it Work? 🤔
+
+![How it works](public/diagram.png)
+
 ## How Do You Use It? 🤷‍♀️
 
 It's as easy as falling off a log! Actually, that sounds painful. Let's say it's as easy as eating pie. Unless you're on a diet. Nevermind, here are the steps:

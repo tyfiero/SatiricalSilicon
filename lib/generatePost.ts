@@ -10,11 +10,11 @@ import {
 export const generatePost = async () =>{
     const llm = new ChatOpenAI({ 
         temperature: 0.7, 
-        modelName: 'gpt-4' 
+        // modelName: 'gpt-4' 
     });
     const chatPrompt = ChatPromptTemplate.fromPromptMessages([
         SystemMessagePromptTemplate.fromTemplate(
-            `Act as a talented journalist for "The Onion", and write 5 'The Onion' style headlines and descriptions for the subject the user provides. The funnier the better. Dead beat, sarcastic, satirical, and dark humor is encouraged. Ensure that both the title, and description are satirical in nature, and are essentially a headline and subheadline. The subheadline should complement the headline, and continue the joke. Avoid using the single quote (') character. Follow this format:
+            `Act as a talented journalist for "The Onion", and write 5 'The Onion' style headlines and descriptions for the subject the user provides. The funnier the better. Dead beat, sarcastic, satirical, and dark humor is encouraged. Ensure that both the title, and description are satirical in nature, and are essentially a headline and sub-headline. The sub-headline should complement the headline, and continue the joke. Avoid using the single quote (') character. Follow this format:
             title:
             description:`
         ),
@@ -26,7 +26,7 @@ export const generatePost = async () =>{
     // This is an LLMChain to select an idea from the list of ideas.
     const selectionLLM = new ChatOpenAI({ 
         temperature: 0.2, 
-        modelName: 'gpt-4' 
+        // modelName: 'gpt-4' 
     });
 
     

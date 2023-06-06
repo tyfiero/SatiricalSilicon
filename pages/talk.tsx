@@ -6,8 +6,9 @@ import Head from "next/head";
 import MotionHeader from "@/components/etc/animation/MotionHeader";
 import MotionText from "@/components/etc/animation/MotionText";
 import MotionImage from "@/components/etc/animation/MotionImage";
-import { FaGithub, FaGlobe, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaGlobe, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { m } from "framer-motion";
+import { set } from "date-fns";
 
 function Talk() {
   const [buttonClicked, setButtonClicked] = React.useState(false);
@@ -21,7 +22,7 @@ function Talk() {
           content={`My talk for AI tinkerers`}
         />
       </Head>
-      <div className="flex flex-col items-center page-container !px-0">
+      <div className="flex flex-col items-center page-container !px-0 !mb-0">
         
 
         <div className="w-full h-[120vh] px-20 py-20 ring-2 bg-gradient-to-br from-white to-p-300 flex flex-col justify-between">
@@ -31,13 +32,11 @@ function Talk() {
                     animate={{ letterSpacing: "0em" }}
                     className="pt-5 pr-4 font-bold leading-tight tracking-tighter text-transparent text-7xl bg-clip-text bg-gradient-to-br from-p-400 via-p-600 to-s-500 f1 drop-shadow-lg drop-shadow-p-800 h-fit fade-effect-quick"
                     onClick={() => {
-                      if (!titleClicked) {
-                        setTitleClicked(true);
-                      }
+                      setTitleClicked(!titleClicked);
                     }
                   }
                   >
-                  I Made a GPT-4 App that Pumps Out Kinda Funny Satirical Fake News Articles, Automatically!
+                  I Made a GPT-4 App that Pumps Out Satirical Fake News Articles that are Kinda Funny, Automatically!
                   </m.h1>:
                   <m.h1
                     initial={{ letterSpacing: "-0.1em" }}
@@ -82,9 +81,9 @@ function Talk() {
           But Like, Why?
         </h1>
         <ol className="text-3xl leading-[4rem] f1 list-disc">
-            <li><strong>I'm Lazy</strong> - Writing and publishing blog posts is tedious</li>
+            <li><strong>Writing and publishing blog posts is tedious</strong> - Why not automate all of it?</li>
             <li> <strong>Learning</strong> - I needed an excuse to learn Langchain, and be one of those 'cool' AI devs</li>
-            <li><strong>I love comedy</strong> - especially satirical news like "The Onion"</li>
+            <li><strong>I love comedy</strong> - Especially satirical news like "The Onion"</li>
             <p className="ml-4 text-2xl"> - Turns out GPT-4 is kinda good at satire <Link href={"/posts"}>👀</Link></p>
         </ol>
 
@@ -108,7 +107,7 @@ function Talk() {
             <li>Newsletter</li>
             <li>Midjourney API</li>
             <li>Vercel Cron Jobs to fully automate</li>
-            <li>idk, maybe a topic thats generally more useful? 🤷</li>
+            <li>Different Subjects</li>
         </ol>
 
           
@@ -138,6 +137,12 @@ function Talk() {
         <FaGithub className="text-5xl "/>
         <h1 className="text-left heading-lg !text-black !text-3xl fade-effect-quick !mb-0 ">
           tyfiero
+        </h1>
+        </div>
+       <div className="flex gap-2">
+        <FaLinkedin className="text-5xl text-blue-600 "/>
+        <h1 className="text-left heading-lg !text-blue-800 !text-3xl fade-effect-quick !mb-0 ">
+          ty-fiero
         </h1>
         </div>
        <div className="flex gap-2">

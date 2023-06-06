@@ -20,8 +20,12 @@ let response = await generatePost();
 console.log(response)
 
 if (response.includes("```")) {
-    // Remove triple backticks from the start and end
+    // Remove triple backticks from the start and end if there are any
     response = response.replace(/^```|```$/g, "");
+}
+if(response[0] !== '-') {
+    // remove all text before first ---
+    response = response.replace(/^[\s\S]*?---/, "---");
 }
 
 console.log(response); // "Your API Response"
@@ -46,6 +50,10 @@ const description = extractData(response).description
 
 console.log(slug, imgUrl, title, description)
 
+if(title === undefined || description === undefined) {
+    console.log('title or description undefined')
+    return res.status(500).end("Post not created successfully.");
+}
 const promptSubject = title + ' ' + description;
 
 console.log(promptSubject)
@@ -53,7 +61,7 @@ console.log(promptSubject)
 const prompt = await generateImagePrompt(promptSubject); 
 console.log(prompt)
 const imageData = await generateImage(prompt);
-console.log(imageData)
+// console.log(imageData)
 await uploadImage(imageData, 'tyfiero', 'SatiricalSilicon', `public${imgUrl}`);
 
 const post = {

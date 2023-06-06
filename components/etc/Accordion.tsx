@@ -42,7 +42,7 @@
             strokeLinecap="round"
             />
         </svg>
-        But like, why? WTF is the point?
+        But like, why? What's is the point?
         </button>
         <div
         id="hs-basic-collapse-one"
@@ -104,7 +104,7 @@
         aria-labelledby="hs-basic-heading-two"
         >
         <p className="mb-6 ml-4 text-gray-800 dark:text-gray-200">
-        Well I'm a developer, so that's something. But also, is there a more absurd industry than tech? 
+        Well I'm a developer, so that's something. But also, is there an industry more absurd than tech? 
         </p>
         </div>
     </div>
@@ -211,7 +211,7 @@
         aria-labelledby="hs-basic-heading-three"
         >
         <p className="mb-6 ml-4 text-gray-800 dark:text-gray-200">
-        I'm glad you asked! The code is open sourced on <a className="anc" href="https://github.com/tyfiero/SatiricalSilicon" target="_blank" >Github</a> , feel free to use it however you'd like, or submit a pull request if you want to help out with this site. Hit me up on <a className="anc" href="https://twitter.com/FieroTy" target="_blank" >Twitter</a> if you wanna collaborate and make something together.
+        I'm glad you asked! The code is open sourced on <a className="anc" href="https://github.com/tyfiero/SatiricalSilicon" target="_blank" >Github</a>, feel free to use it however you'd like, or submit a pull request if you want to help out with this site. Hit me up on <a className="anc" href="https://twitter.com/FieroTy" target="_blank" >Twitter</a> if you wanna collaborate and make something together.
         </p>
         </div>
     </div>
