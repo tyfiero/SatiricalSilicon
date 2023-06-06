@@ -85,7 +85,7 @@ function Talk() {
             <li><strong>I'm Lazy</strong> - Writing and publishing blog posts is tedious</li>
             <li> <strong>Learning</strong> - I needed an excuse to learn Langchain, and be one of those 'cool' AI devs</li>
             <li><strong>I love comedy</strong> - especially satirical news like "The Onion"</li>
-            <p className="ml-4 text-2xl"> - Turns out GPT-4 is kinda funny 👀</p>
+            <p className="ml-4 text-2xl"> - Turns out GPT-4 is kinda good at satire <Link href={"/posts"}>👀</Link></p>
         </ol>
 
           
@@ -106,9 +106,8 @@ function Talk() {
         </h1>
         <ol className="text-3xl leading-[4rem] f1 list-disc">
             <li>Newsletter</li>
-            <li>Morning email of headlines</li>
             <li>Midjourney API</li>
-            <li>Vercel Cron Jobs</li>
+            <li>Vercel Cron Jobs to fully automate</li>
             <li>idk, maybe a topic thats generally more useful? 🤷</li>
         </ol>
 
