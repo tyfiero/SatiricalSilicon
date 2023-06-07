@@ -57,7 +57,7 @@ function Talk() {
             </div>
           </MotionHeader>
           <button
-            className="button-1 w-fit"
+            className="hidden button-1 w-fit"
             onClick={() => {
               if (!buttonClicked) {
                 setButtonClicked(true);
