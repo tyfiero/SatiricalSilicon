@@ -10,6 +10,7 @@ import MdXHomePosts from "@/components/blog/mdx/mdxHomePosts";
 import PostPreview from "@/components/blog/post-preview";
 
 export default function Index({ allPosts }) {
+  console.log(allPosts)
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   return (

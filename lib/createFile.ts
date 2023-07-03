@@ -13,7 +13,7 @@ const repoOwner = 'tyfiero'; // Your GitHub username
 const repoName = 'SatiricalSilicon'; // Your repository name
 const pathToFile = `posts/${postContent.slug}.mdx`; // assuming postContent has a slug property
 // const message = `Create ${postContent.slug}.mdx`;
-const message = `*POST* \ntitle: ${postContent.title} \ndescription: ${postContent.description} \nimgUrl: https://satiricalsilicon.com/${postContent.imgUrl}`;
+const message = `*POST* \ntitle: ${postContent.title} \ndescription: ${postContent.description} \nimgUrl: https://satiricalsilicon.com${postContent.imgUrl}`;
 
 const sha256 = createHash('sha256');
 sha256.update(postContent.content);
