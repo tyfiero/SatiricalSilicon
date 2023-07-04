@@ -27,7 +27,7 @@ try{
         content
     };
 
-    console.log(post)
+    // console.log(post)
 
     await createFile(post);
     console.timeEnd('makepost')
